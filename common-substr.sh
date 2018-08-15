@@ -53,7 +53,7 @@ if [ $OPTIND -eq 1 ]; then
   shortusage
 fi
 
-LC_ALL=C awk -v strlen="$strlen" -v nocase="$nocase" -v stats="$stats" -v threshold="$threshold" '
+LC_ALL=C gawk -v strlen="$strlen" -v nocase="$nocase" -v stats="$stats" -v threshold="$threshold" '
 NR > 0 {
   if(nocase)
     str = tolower($1)
